@@ -1,115 +1,94 @@
-import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Layout from '../components/Layout';
+import SkillCard from '../components/SkillCard';
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const skills = [
+    { name: 'JavaScript', icon: 'javascript.svg' },
+    { name: 'Python', icon: 'python.svg' },
+    { name: 'Java', icon: 'java.svg' },
+    { name: 'C++', icon: 'cpp.svg' },
+    { name: 'Dart', icon: 'dart.svg' },
+    { name: 'Kotlin', icon: 'kotlin.svg' },
+    { name: 'React', icon: 'react.svg' },
+    { name: 'Flutter', icon: 'flutter.svg' },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const experiences = [
+    {
+      title: 'Member, Google Developers Group Chennai',
+      date: 'Dec 2023 – Present',
+      logo: 'gdg.svg',
+      description: 'Engaged in developer-focused events and workshops, enhancing skills in Google technologies such as Android, Firebase, and Google Cloud.',
+    },
+    {
+      title: 'Technical Team Member, ACM SRMSIGKDD',
+      date: 'June 2024 - Present',
+      logo: 'acm.svg',
+      description: 'Contributed to the development and implementation of technical projects, including data science and machine learning initiatives.',
+    },
+    {
+      title: 'Summer Internship, Ms Azure',
+      date: 'Jan 2024 – May 2024',
+      logo: 'azure.svg',
+      description: 'Gained hands-on experience in deploying and managing cloud-based applications using Microsoft Azure services.',
+    },
+  ];
+
+  return (
+    <Layout>
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Professional Summary</h2>
+        <p>
+          Web Developer with 3 years of experience, skilled in HTML, CSS, and JavaScript. Proficient in Data Structures, OOP, and C++, currently focusing on
+          Cross Platform App Development using DART and Flutter, with additional expertise in cloud technologies and SQL and also introducing myself to the
+          blockchain world.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {skills.map((skill) => (
+            <SkillCard key={skill.name} skill={skill} />
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Experience</h2>
+        {experiences.map((exp) => (
+          <div key={exp.title} className="mb-4">
+            <div className="flex items-center space-x-2">
+              <img src={`/images/companies/${exp.logo}`} alt={exp.title} className="w-8 h-8" />
+              <h3 className="text-xl font-bold">{exp.title}</h3>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400">{exp.date}</p>
+            <p className="mt-2">{exp.description}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Education</h2>
+        <div className="mb-4">
+          <h3 className="text-xl font-bold">Bachelor of Technology (Computer Science)</h3>
+          <p>SRM Institute of Science and Technology, Kattankulathur</p>
+          <p>Aug 2023 - May 2027</p>
+          <p>GPA 9/10</p>
+        </div>
+        <div className="mb-4">
+          <h3 className="text-xl font-bold">Class 12th - CBSE(PCM)</h3>
+          <p>Delhi Public School, Bokaro</p>
+          <p>May 2022 – May 2023</p>
+          <p>Percentage – 81%</p>
+        </div>
+        <div className="mb-4">
+          <h3 className="text-xl font-bold">Class 10th - CISCE</h3>
+          <p>St. Xavier's School, Bokaro</p>
+          <p>May 2015 – May 2021</p>
+          <p>Percentage – 90%</p>
+        </div>
+      </section>
+    </Layout>
   );
 }
