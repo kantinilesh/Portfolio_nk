@@ -76,7 +76,7 @@ const Portfolio = () => {
       company: "ACM SRMSIGKDD",
       duration: "June 2024 - Present",
       logo: "/company-logos/acm.png",
-      description: "Contributed to technical projects including data science and machine learning initiatives."
+      description: "Contributed to technical projects including web dev and machine learning initiatives."
     },
     {
       role: "Summer Internship",
@@ -143,7 +143,7 @@ const Portfolio = () => {
         <p className="text-lg">
         I am a web developer with three years of experience in HTML, CSS, and JavaScript, with a strong foundation in data structures, object-oriented programming, and C++. 
         Recently, I've been focusing on cross-platform app development using Flutter and Dart, while also deepening my knowledge of cloud technologies 
-        and exploring the blockchain world. My experience includes active roles with Google Developers Group Chennai and Principal Investigator in HEALLY, where I've contributed to technical projects in data science and machine learning.
+        and exploring the blockchain world. My experience includes active roles with Google Developers Group Chennai and I am  also the  P͟r͟i͟n͟c͟i͟p͟a͟l͟ ͟I͟n͟v͟e͟s͟t͟i͟g͟a͟t͟o͟r͟  in HEALLY, a startup which aims to provide eductaion to all, currently i am worwking on Heally AI and as a Backend Software Engineer.
         <br></br>
         During a summer internship with Microsoft Azure, I gained valuable hands-on experience 
         deploying and managing applications in cloud environments. 
