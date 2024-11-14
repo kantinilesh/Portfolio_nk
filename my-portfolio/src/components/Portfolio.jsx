@@ -107,6 +107,8 @@ const Portfolio = () => {
     { name: "Git", logo: "/skill-logos/git.svg", proficiency: 80 },
     { name: "AWS", logo: "/skill-logos/aws.svg", proficiency: 78 },
     { name: "Ms Azure", logo: "/skill-logos/azure.svg", proficiency: 52 },
+    { name: "Solidity", logo: "/skill-logos/solidity.svg", proficiency: 34 },
+    
   ];
 
   const gallery = [
