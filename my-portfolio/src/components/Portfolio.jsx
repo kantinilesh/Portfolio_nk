@@ -286,11 +286,11 @@ const Portfolio = () => {
           <div className="mt-6 flex justify-center">
             <iframe 
               src="https://open.spotify.com/embed/track/2plbrEY59IikOBgBGLjaoe"
-              width="50%" 
+              width="100%" 
               height="80" 
               frameBorder="0" 
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              className="rounded-lg md:w-1/2"
+              className="rounded-lg "
             ></iframe>
           </div>
         </div>
