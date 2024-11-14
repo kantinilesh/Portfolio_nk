@@ -9,8 +9,8 @@ const Portfolio = () => {
   useEffect(() => {
     const options = {
       strings: ['Nilesh Kanti', 'Web Dev', 'Devops'],
-      typeSpeed: 50,
-      backSpeed: 50,
+      typeSpeed: 100,
+      backSpeed: 100,
       loop: true,
     };
 
@@ -73,18 +73,18 @@ const Portfolio = () => {
   ];
 
   const skills = [
-    { name: "JavaScript", logo: "/skill-logos/javascript.png", proficiency: 80 },
-    { name: "Python", logo: "/skill-logos/python.png", proficiency: 75 },
-    { name: "Java", logo: "/skill-logos/java.png", proficiency: 70 },
-    { name: "C++", logo: "/skill-logos/cpp.png", proficiency: 65 },
-    { name: "Dart", logo: "/skill-logos/dart.png", proficiency: 55 },
-    { name: "ReactJS", logo: "/skill-logos/react.png", proficiency: 85 },
-    { name: "Flutter", logo: "/skill-logos/flutter.png", proficiency: 75 },
-    { name: "Tailwind CSS", logo: "/skill-logos/tailwind.png", proficiency: 80 },
-    { name: "MySQL", logo: "/skill-logos/mysql.png", proficiency: 70 },
-    { name: "Git", logo: "/skill-logos/git.png", proficiency: 75 },
-    { name: "AWS", logo: "/skill-logos/aws-s3.png", proficiency: 65 },
-    { name: "Ms Azure", logo: "/skill-logos/aws-s3.png", proficiency: 65 },
+    { name: "JavaScript", logo: "/skill-logos/javascript.svg", proficiency: 65 },
+    { name: "Python", logo: "/skill-logos/python.svg", proficiency: 85 },
+    { name: "Java", logo: "/skill-logos/java.svg", proficiency: 90 },
+    { name: "C++", logo: "/skill-logos/cpp.svg", proficiency: 100 },
+    { name: "Dart", logo: "/skill-logos/dart.svg", proficiency: 60 },
+    { name: "ReactJS", logo: "/skill-logos/react.svg", proficiency: 55 },
+    { name: "Flutter", logo: "/skill-logos/flutter.svg", proficiency: 75 },
+    { name: "Tailwind CSS", logo: "/skill-logos/tailwind.svg", proficiency: 60 },
+    { name: "MySQL", logo: "/skill-logos/mysql.svg", proficiency: 90 },
+    { name: "Git", logo: "/skill-logos/git.svg", proficiency: 80 },
+    { name: "AWS", logo: "/skill-logos/aws.svg", proficiency: 78 },
+    { name: "Ms Azure", logo: "/skill-logos/azure.svg", proficiency: 52 },
   ];
 
   const gallery = [
@@ -105,9 +105,9 @@ const Portfolio = () => {
     <div className="animate-fadeIn">
       {/* Profile Image Section */}
       <div className="w-full flex justify-center mb-12">
-        <div className="w-48 h-48 bg-blue-500 overflow-hidden">
+        <div className="w-40 h-40 ">
           <img
-            src="/profile-image.jpeg"
+            src="/profile-image.svg"
             alt="Nilesh Kanti"
             className="w-full h-full object-cover scale-150"
           />
@@ -117,7 +117,7 @@ const Portfolio = () => {
 
       {/* About Section */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold mb-4">About Me</h2>
+        <h2 className="text-xl font-bold mb-4"><u>About Me</u></h2>
         <p className="text-lg">
         I am a web developer with three years of experience in HTML, CSS, and JavaScript, with a strong foundation in data structures, object-oriented programming, and C++. 
         Recently, I've been focusing on cross-platform app development using Flutter and Dart, while also deepening my knowledge of cloud technologies 
@@ -130,7 +130,7 @@ const Portfolio = () => {
 
       {/* Skills Section */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold mb-4">Skills</h2>
+        <h2 className="text-xl font-bold mb-4"><u>Tools I use</u> </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {skills.map((skill, index) => (
             <div
@@ -248,7 +248,7 @@ const Portfolio = () => {
           </p>
           <p className="flex items-center justify-center mt-2">
             Using React 
-            <img src="/react-logo.svg" alt="React Logo" className="w-6 h-6 ml-2" />
+            <img src="skill-logos/react.svg" alt="React Logo" className="w-6 h-6 ml-2" />
           </p>
         </div>
       </div>
@@ -282,16 +282,16 @@ const Portfolio = () => {
         </h1>
         <div className="flex items-center gap-4">
           <div className="flex gap-2">
-            <a href="https://linkedin.com/nileshkanti" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/nileshkanti" target="_blank" rel="noopener noreferrer">
               <Linkedin className="hover:text-blue-500" />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/kantinilesh" target="_blank" rel="noopener noreferrer">
               <Github className="hover:text-gray-400" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/ihatedsa" target="_blank" rel="noopener noreferrer">
               <Twitter className="hover:text-blue-400" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/nilxhh" target="_blank" rel="noopener noreferrer">
               <Instagram className="hover:text-pink-500" />
             </a>
           </div>
