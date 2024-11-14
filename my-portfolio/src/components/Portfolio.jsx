@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Github, Linkedin, Twitter, Instagram, ExternalLink, Home, FolderGit, BookOpen, Briefcase, Mail, Image } from 'lucide-react';
+import { Sun, Moon, Github, Linkedin, Twitter, Instagram,  ExternalLink, Home, FolderGit, BookOpen, Briefcase, Mail, Image } from 'lucide-react';
 import Typed from 'typed.js';
+
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -27,34 +28,48 @@ const Portfolio = () => {
       description: "AI-based Healthcare App for disease prediction using ML/DL models",
       tech: "HTML, TailwindCSS, LeafletJS, VanillaJS, Flask ML/DL",
       date: "September 2024",
-      link: "#",
-      image: "/placeholder.svg?height=200&width=300"
+      link: "https://health-tech-nivaran.vercel.app",
+      image: "projects/nivaran.png?height=200&width=300"
     },
     {
       title: "Farm_Health",
       description: "Platform for farmers using neural networks to predict plant diseases",
       tech: "HTML, CSS, Javascript, TensorFlow, ScikitLearn, Pandas, FastAPI, Keras",
       date: "June 2024",
-      link: "#",
-      image: "/placeholder.svg?height=200&width=300"
+      link: "https://github.com/kantinilesh/ACM_FarmHealth",
+      image: "projects/farmhealth.jpg?height=200&width=300"
     },
     {
       title: "SUNSCOPE",
       description: "Solar energy adoption platform using YOLO v11 for rooftop analysis",
       tech: "Python, YOLO, Google Maps API",
       date: "September 2024 - Present",
-      link: "#",
-      image: "/placeholder.svg?height=200&width=300"
+      link: "https://github.com/kantinilesh/SUNSCOPE_FINAL",
+      image: "projects/sunscope.png?height=200&width=300"
     }
   ];
 
   const experience = [
     {
+      role: "Principal Investigator",
+      company: "HEALLY, North Carolina, USA",
+      duration: "Oct 2024 – Present",
+      logo: "/company-logos/heally.png",
+      description: "Building our new startup 🚀 "
+    },
+    {
       role: "Member",
       company: "Google Developers Group Chennai",
-      duration: "Dec 2023 – Present",
+      duration: "December 2023 – Present",
       logo: "/company-logos/gdg.png",
       description: "Engaged in developer-focused events and workshops, enhancing skills in Google technologies."
+    },
+    {
+      role: "Community Builder",
+      company: "Amazon Web Services",
+      duration: "July 2024 – Present",
+      logo: "/skill-logos/aws.svg",
+      description: "Help and grow with Amazon Web Services to connect and fill this world with positive vibes of the community."
     },
     {
       role: "Technical Team Member",
@@ -66,10 +81,17 @@ const Portfolio = () => {
     {
       role: "Summer Internship",
       company: "MS Azure",
-      duration: "Jan 2024 – May 2024",
+      duration: "January 2024 – May 2024",
       logo: "/company-logos/azure.png",
       description: "Gained hands-on experience in deploying and managing cloud-based applications."
-    }
+    },
+    {
+      role: "Application Dev Team",
+      company: "Codenex SRMIST",
+      duration: "November 2024 – Present",
+      logo: "/company-logos/codenex.jpeg",
+      description: "Contributing with my Flutter and Dart skills"
+    },
   ];
 
   const skills = [
@@ -90,13 +112,13 @@ const Portfolio = () => {
   const gallery = [
     {
       title: "Image 1",
-      url: "/gallery/image1.jpg",
-      description: "Description for Image 1"
+      url: "/gallery/cjb.jpeg",
+      description: "baad me update larunga kal aana"
     },
     {
       title: "Image 2",
-      url: "/gallery/image2.jpg",
-      description: "Description for Image 2"
+      url: "/gallery/cjb.jpeg",
+      description: "O stree kal aana"
     },
     // Add more images as needed
   ];
@@ -104,7 +126,7 @@ const Portfolio = () => {
   const HomePage = () => (
     <div className="animate-fadeIn">
       {/* Profile Image Section */}
-      <div className="w-full flex justify-center mb-12">
+      <div className="w-full flex justify-center mb-10">
         <div className="w-40 h-40 ">
           <img
             src="/profile-image.svg"
@@ -150,6 +172,8 @@ const Portfolio = () => {
   );
 
   const ProjectsPage = () => (
+
+    <div className="animate-fadeIn">
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project, index) => (
         <div key={index} className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
@@ -169,13 +193,16 @@ const Portfolio = () => {
         </div>
       ))}
     </div>
+    </div>
   );
 
   const ExperiencePage = () => (
+
+    <div className="animate-fadeIn">
     <div className="grid gap-6">
       {experience.map((exp, index) => (
         <div key={index} className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} flex items-center gap-4`}>
-          <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center">
+          <div className="w-16 h-16  flex items-center justify-center">
             <img src={exp.logo} alt={exp.company} className="w-12 h-12 object-contain" />
           </div>
           <div>
@@ -187,9 +214,12 @@ const Portfolio = () => {
         </div>
       ))}
     </div>
+    </div>
   );
 
   const GalleryPage = () => (
+
+    <div className="animate-fadeIn">
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {gallery.map((item, index) => (
         <div key={index} className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} shadow-lg transform hover:scale-105 transition-transform duration-300`}>
@@ -204,6 +234,7 @@ const Portfolio = () => {
           <p className="text-sm">{item.description}</p>
         </div>
       ))}
+      </div>
     </div>
   );
 
@@ -225,16 +256,16 @@ const Portfolio = () => {
           <div>
             <p className="font-medium">Social Media</p>
             <div className="flex gap-4 mt-2">
-              <a href="https://linkedin.com/nileshkanti" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/nileshkanti" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="hover:text-blue-500" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/kantinilesh" target="_blank" rel="noopener noreferrer">
                 <Github className="hover:text-gray-400" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/ihatedsa" target="_blank" rel="noopener noreferrer">
                 <Twitter className="hover:text-blue-400" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/nilxhh" target="_blank" rel="noopener noreferrer">
                 <Instagram className="hover:text-pink-500" />
               </a>
             </div>
@@ -247,13 +278,26 @@ const Portfolio = () => {
             by Nilesh
           </p>
           <p className="flex items-center justify-center mt-2">
-            Using React 
+            using
             <img src="skill-logos/react.svg" alt="React Logo" className="w-6 h-6 ml-2" />
+            <img src="skill-logos/vite.svg" alt="Vite Logo" className="w-6 h-6 ml-2" />
           </p>
+          {/* Spotify Embed */}
+          <div className="mt-6 flex justify-center">
+            <iframe 
+              src="https://open.spotify.com/embed/track/2plbrEY59IikOBgBGLjaoe"
+              width="50%" 
+              height="80" 
+              frameBorder="0" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              className="rounded-lg md:w-1/2"
+            ></iframe>
+          </div>
         </div>
       </div>
     );
   };
+  
   
 
   const renderPage = () => {
