@@ -52,7 +52,7 @@ const Portfolio = () => {
       description: "Get real time weather with you City name.",
       tech: "Reactjs, TailwindCSS, Axios, OpenweatherAPI",
       date: "June 2024",
-      link: "https://github.com/kantinilesh/weather-dashboard",
+      link: "https://weather-dashboard-6jmn.vercel.app",
       image: "projects/weather.png?height=200&width=300"
     },
   ];
