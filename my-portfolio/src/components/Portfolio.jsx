@@ -26,7 +26,7 @@ const Portfolio = () => {
     {
       title: "Nivaran Health",
       description: "AI-based Healthcare App for disease prediction using ML/DL models",
-      tech: "HTML, TailwindCSS, LeafletJS, VanillaJS, Flask ML/DL",
+      tech: "HTML, TailwindCSS, LeafletJS, VanillaJS, Gemini API, Flask ML/DL",
       date: "September 2024",
       link: "https://health-tech-nivaran.vercel.app",
       image: "projects/nivaran.png?height=200&width=300"
@@ -46,7 +46,15 @@ const Portfolio = () => {
       date: "September 2024 - Present",
       link: "https://github.com/kantinilesh/SUNSCOPE_FINAL",
       image: "projects/sunscope.png?height=200&width=300"
-    }
+    },
+    {
+      title: "React Weather App",
+      description: "Get real time weather with you City name.",
+      tech: "Reactjs, TailwindCSS, Axios, OpenweatherAPI",
+      date: "June 2024",
+      link: "https://github.com/kantinilesh/weather-dashboard",
+      image: "projects/weather.png?height=200&width=300"
+    },
   ];
 
   const experience = [
@@ -321,7 +329,6 @@ const Portfolio = () => {
 
   return (
     <div className={`min-h-screen pb-20 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
-      {/* Header */}
       <header className="p-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">
           <span id="typed-name"></span>
