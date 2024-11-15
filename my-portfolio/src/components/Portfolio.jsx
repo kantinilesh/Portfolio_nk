@@ -123,7 +123,7 @@ const Portfolio = () => {
     {
       title: "Image 1",
       url: "/gallery/cjb.jpeg",
-      description: "baad me update larunga kal aana"
+      description: "baad me update karunga kal aana"
     },
     {
       title: "Image 2",
