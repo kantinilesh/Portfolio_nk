@@ -103,19 +103,19 @@ const Portfolio = () => {
   ];
 
   const skills = [
-    { name: "JavaScript", logo: "/skill-logos/javascript.svg", proficiency: 65 },
-    { name: "Python", logo: "/skill-logos/python.svg", proficiency: 85 },
-    { name: "Java", logo: "/skill-logos/java.svg", proficiency: 90 },
-    { name: "C++", logo: "/skill-logos/cpp.svg", proficiency: 100 },
-    { name: "Dart", logo: "/skill-logos/dart.svg", proficiency: 60 },
-    { name: "ReactJS", logo: "/skill-logos/react.svg", proficiency: 55 },
-    { name: "Flutter", logo: "/skill-logos/flutter.svg", proficiency: 75 },
-    { name: "Tailwind CSS", logo: "/skill-logos/tailwind.svg", proficiency: 60 },
-    { name: "MySQL", logo: "/skill-logos/mysql.svg", proficiency: 90 },
-    { name: "Git", logo: "/skill-logos/git.svg", proficiency: 80 },
-    { name: "AWS", logo: "/skill-logos/aws.svg", proficiency: 78 },
-    { name: "Ms Azure", logo: "/skill-logos/azure.svg", proficiency: 52 },
-    { name: "Solidity", logo: "/skill-logos/solidity.svg", proficiency: 34 },
+    { name: "JavaScript", logo: "/skill-logos/javascript.svg" },
+    { name: "Python", logo: "/skill-logos/python.svg"},
+    { name: "Java", logo: "/skill-logos/java.svg"},
+    { name: "C++", logo: "/skill-logos/cpp.svg"},
+    { name: "Dart", logo: "/skill-logos/dart.svg"},
+    { name: "ReactJS", logo: "/skill-logos/react.svg",},
+    { name: "Flutter", logo: "/skill-logos/flutter.svg"},
+    { name: "Tailwind CSS", logo: "/skill-logos/tailwind.svg"},
+    { name: "MySQL", logo: "/skill-logos/mysql.svg"},
+    { name: "Git", logo: "/skill-logos/git.svg"},
+    { name: "AWS", logo: "/skill-logos/aws.svg"},
+    { name: "Ms Azure", logo: "/skill-logos/azure.svg"},
+    { name: "Solidity", logo: "/skill-logos/solidity.svg"},
     
   ];
 
@@ -130,7 +130,7 @@ const Portfolio = () => {
       url: "/gallery/cjb.jpeg",
       description: "O stree kal aana"
     },
-    // Add more images as needed
+    
   ];
 
   const HomePage = () => (
@@ -147,7 +147,7 @@ const Portfolio = () => {
       </div>
 
 
-      {/* About Section */}
+    
       <section className="mb-12">
         <h2 className="text-xl font-bold mb-4"><u>About Me</u></h2>
         <p className="text-lg">
@@ -163,18 +163,17 @@ const Portfolio = () => {
       {/* Skills Section */}
       <section className="mb-12">
         <h2 className="text-xl font-bold mb-4"><u>Tools I use</u> </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-10 gap-4">
           {skills.map((skill, index) => (
             <div
               key={index}
               className={`p-2 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} flex flex-col items-center justify-center gap-2`}
             >
-              <img src={skill.logo} alt={skill.name} className="w-8 h-8" />
+              <img src={skill.logo} alt={skill.name} className="w-10 h-10" />
               <span>{skill.name}</span>
-              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${skill.proficiency}%` }}></div>
+              
               </div>
-            </div>
+          
           ))}
         </div>
       </section>
@@ -182,8 +181,7 @@ const Portfolio = () => {
   );
 
   const ProjectsPage = () => (
-
-    <div className="animate-fadeIn">
+  <div className="animate-fadeIn">
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project, index) => (
         <div key={index} className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
@@ -203,8 +201,22 @@ const Portfolio = () => {
         </div>
       ))}
     </div>
+
+    <div className="mt-8 text-center">
+      <h2 className="text-2xl font-bold relative inline-block">
+        More to Come
+        <span className="absolute left-0 bottom-0 w-full h-1 bg-blue-500 transform scale-x-0 origin-left transition-transform duration-300 ease-in-out" />
+      </h2>
     </div>
-  );
+
+    <style jsx>{`
+      h2:hover span {
+        transform: scaleX(1);
+      }
+    `}</style>
+  </div>
+);
+
 
   const ExperiencePage = () => (
 
