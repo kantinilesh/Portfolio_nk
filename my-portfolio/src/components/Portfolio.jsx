@@ -22,6 +22,8 @@ const Portfolio = () => {
     };
   }, []);
 
+
+
   const projects = [
     {
       title: "Nivaran Health",
@@ -136,7 +138,7 @@ const Portfolio = () => {
   const HomePage = () => (
     <div className="animate-fadeIn">
       {/* Profile Image Section */}
-      <div className="w-full flex justify-center mb-10">
+      <div className="w-full flex justify-center mb-5">
         <div className="w-40 h-40 ">
           <img
             src="/profile-image.svg"
@@ -340,8 +342,8 @@ const Portfolio = () => {
   };
 
   return (
-    <div className={`min-h-screen pb-20 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
-      <header className="p-4 flex justify-between items-center">
+    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-10 p-4 flex justify-between items-center bg-opacity-95 backdrop-filter backdrop-blur-lg ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} transition-colors duration-300 border-b`}>
         <h1 className="text-2xl font-bold">
           <span id="typed-name"></span>
         </h1>
@@ -363,47 +365,51 @@ const Portfolio = () => {
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="p-2 rounded-full hover:bg-gray-700"
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
             {darkMode ? <Sun size={24} /> : <Moon size={24} />}
           </button>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 pt-20 pb-8">
         {renderPage()}
       </main>
 
-      {/* Navigation */}
       <nav className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} p-2 rounded-full shadow-lg`}>
         <div className="flex items-center gap-4">
           <button
             onClick={() => setCurrentPage('home')}
             className={`p-2 rounded-full ${currentPage === 'home' ? 'bg-blue-500 text-white' : ''}`}
+            aria-label="Go to Home page"
           >
             <Home size={20} />
           </button>
           <button
             onClick={() => setCurrentPage('projects')}
             className={`p-2 rounded-full ${currentPage === 'projects' ? 'bg-blue-500 text-white' : ''}`}
+            aria-label="Go to Projects page"
           >
             <FolderGit size={20} />
           </button>
           <button
             onClick={() => setCurrentPage('experience')}
             className={`p-2 rounded-full ${currentPage === 'experience' ? 'bg-blue-500 text-white' : ''}`}
+            aria-label="Go to Experience page"
           >
             <Briefcase size={20} />
           </button>
           <button
             onClick={() => setCurrentPage('gallery')}
             className={`p-2 rounded-full ${currentPage === 'gallery' ? 'bg-blue-500 text-white' : ''}`}
+            aria-label="Go to Gallery page"
           >
             <Image size={20} />
           </button>
           <button
             onClick={() => setCurrentPage('contact')}
             className={`p-2 rounded-full ${currentPage === 'contact' ? 'bg-blue-500 text-white' : ''}`}
+            aria-label="Go to Contact page"
           >
             <Mail size={20} />
           </button>
@@ -414,3 +420,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
