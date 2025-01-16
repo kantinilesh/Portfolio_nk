@@ -124,13 +124,13 @@ const Portfolio = () => {
   const gallery = [
     {
       title: "Image 1",
-      url: "/gallery/cjb.jpeg",
-      description: "baad me update karunga kal aana"
+      url: "/gallery/coming.jpg",
+      description: "Cming soon"
     },
     {
       title: "Image 2",
-      url: "/gallery/cjb.jpeg",
-      description: "O stree kal aana"
+      url: "/gallery/coming.jpg",
+      description: "coming soon"
     },
     
   ];
